@@ -51,6 +51,14 @@ body {
     background: var(--secondary);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 a:link {
     color: var(--primary);
 }
@@ -173,13 +181,8 @@ li.vertical-list-item {
     background: linear-gradient(var(--alt-back), var(--back));
     color: var(--primary);
     border-radius: 5px;
-    transform: rotate3d(1, 1, -1, 22deg);
     transition: transform 0.5s ease-out;
     box-shadow: -5px 10px 20px var(--alt-back), inset 5px 5px 5px var(--alt-back);
-}
-
-.card:hover {
-    transform: rotate3d(1, 1, -1, 10deg);
 }
 
 .card > * {
