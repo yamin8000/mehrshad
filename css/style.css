@@ -1,40 +1,21 @@
 :root {
-    color-scheme: dark light;
     scroll-behavior: smooth;
     border-top: 2px solid var(--primary);
     border-bottom: 2px solid var(--primary);
 }
 
-@media (prefers-color-scheme: light) {
-    * {
-        --primary: rgb(16 16 128);
-        --primary-darker: rgb(8 8 64);
-        --secondary: rgb(26 83 150);
-        --back: rgb(220 220 220);
-        --on-back: rgb(16 16 16);
-        --alt-back: rgb(230 230 230);
-        --hover: rgb(240 240 240);
-    }
-
-    *::selection {
-        color: rgba(255, 255, 255, 90%);
-    }
+* {
+    --primary: rgb(16 16 128);
+    --primary-darker: rgb(8 8 64);
+    --secondary: rgb(26 83 150);
+    --back: rgb(200 200 200);
+    --on-back: rgb(16 16 16);
+    --alt-back: rgb(210 210 210);
+    --hover: rgb(220 220 220);
 }
 
-@media (prefers-color-scheme: dark) {
-    * {
-        --primary: rgb(255 128 32);
-        --primary-darker: rgb(128 64 16);
-        --secondary: rgb(236 181 38);
-        --back: rgb(32 32 32);
-        --on-back: rgb(225 225 225);
-        --alt-back: rgb(24 24 24);
-        --hover: rgb(16 16 16);
-    }
-
-    *::selection {
-        color: rgba(0, 0, 0, 90%);
-    }
+*::selection {
+    color: rgba(255, 255, 255, 90%);
 }
 
 body {
@@ -121,12 +102,6 @@ li {
     color: var(--secondary);
 }
 
-nav {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
 ul.vertical-list {
     list-style: none;
     margin: 0;
@@ -137,7 +112,6 @@ li.vertical-list-item {
     display: inline-block;
     padding: 5px 30px;
     margin-bottom: 5px;
-    background: var(--alt-back);
 }
 
 .title {
@@ -176,7 +150,7 @@ li.vertical-list-item {
     flex-flow: column;
     justify-content: space-between;
     height: 2in;
-    width: 3.5in;
+    width: 10in;
     margin: 25px auto;
     background: linear-gradient(var(--alt-back), var(--back));
     color: var(--primary);
@@ -195,21 +169,6 @@ li.vertical-list-item {
     justify-content: center;
     gap: 10px;
     padding: 10pt 10pt 0;
-    font-size: 12pt;
-    letter-spacing: 1.2pt;
-}
-
-.card-middle {
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18pt;
-}
-
-.card-middle .title {
-    font-size: 14pt;
-    color: var(--secondary);
 }
 
 .card-bottom {
