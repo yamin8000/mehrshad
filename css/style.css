@@ -4,13 +4,13 @@
 }
 
 * {
-    --primary: rgb(16 16 128);
-    --primary-darker: rgb(8 8 64);
-    --secondary: rgb(26 83 150);
-    --back: rgb(200 200 200);
-    --on-back: rgb(16 16 16);
-    --alt-back: rgb(210 210 210);
-    --hover: rgb(220 220 220);
+    --primary: rgb(0, 64, 96);
+    --primary-darker: rgb(0 32 64);
+    --secondary: rgb(32, 128, 128);
+    --back: rgb(190, 215, 215);
+    --on-back: rgb(0 16 32);
+    --alt-back: rgb(200 225 225);
+    --hover: rgb(210 235 235);
 }
 
 *::selection {
@@ -53,26 +53,27 @@ a:visited {
 
 h1 {
     margin-top: 0;
+    color: var(--primary);
+    text-shadow: var(--secondary) 1px 1px 3px;
+}
+
+h2 {
+    color: var(--primary);
+    text-shadow: var(--secondary) 1px 1px 3px;
 }
 
 h2 span, h3 span, h4 span, h5 span, h6 span {
     color: var(--primary);
     background-color: var(--alt-back);
-    transition: background-color 0.5s ease-out;
-
-    --notch-size: 10px;
-    clip-path: polygon(
-            0% var(--notch-size),
-            var(--notch-size) 0%,
-            calc(100% - var(--notch-size)) 0%,
-            100% var(--notch-size),
-            100% calc(100% - var(--notch-size)),
-            calc(100% - var(--notch-size)) 100%,
-            var(--notch-size) 100%,
-            0% calc(100% - var(--notch-size))
-    );
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
+    border-radius: 15px;
     padding: 15px 35px;
     text-align: center;
+}
+
+h2 span:hover, h3 span:hover, h4 span:hover, h5 span:hover, h6 span:hover {
+    background-color: var(--hover);
+    color: var(--primary-darker);
 }
 
 table thead {
@@ -91,10 +92,6 @@ td:nth-child(2), th:nth-child(2) {
 
 tr:last-child td {
     border-bottom: none;
-}
-
-h2 span:hover, h3 span:hover, h4 span:hover, h5 span:hover, h6 span:hover {
-    background-color: var(--hover);
 }
 
 li {
@@ -152,10 +149,9 @@ li.vertical-list-item {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    width: 75%;
     margin: 25px auto;
     background: linear-gradient(var(--alt-back), var(--back));
-    border-radius: 5px;
+    border-radius: 15px;
     transition: transform 0.5s ease-out;
     box-shadow: -5px 10px 20px var(--alt-back), inset 5px 5px 5px var(--alt-back);
 }
@@ -182,7 +178,8 @@ li.vertical-list-item {
     display: flex;
     flex-flow: column;
     font-size: 10pt;
-    padding: 0 0 10pt;
+    margin-top: 25px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -193,9 +190,9 @@ li.vertical-list-item {
 }
 
 .profile-pic {
-    border-radius: 25%;
-    width: 33%;
-    height: 33%;
+    border-radius: 15%;
+    width: 25%;
+    height: 25%;
 }
 
 .profile-header {
