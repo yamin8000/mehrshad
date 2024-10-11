@@ -28,7 +28,7 @@ body {
 }
 
 #main {
-    margin: 50px 25px;
+    margin: 25px 25px;
 }
 
 *::selection {
@@ -55,6 +55,7 @@ h1 {
     margin-top: 0;
     color: var(--primary);
     text-shadow: var(--secondary) 1px 1px 3px;
+    font-size: 40pt;
 }
 
 h2 {
@@ -73,7 +74,7 @@ h2 span, h3 span, h4 span, h5 span, h6 span {
 
 h2 span:hover, h3 span:hover, h4 span:hover, h5 span:hover, h6 span:hover {
     background-color: var(--hover);
-    color: var(--primary-darker);
+    color: var(--secondary);
 }
 
 table thead {
@@ -149,10 +150,10 @@ li.vertical-list-item {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    margin: 25px auto;
+    margin: 10px;
+    padding: 10px;
     background: linear-gradient(var(--alt-back), var(--back));
     border-radius: 15px;
-    transition: transform 0.5s ease-out;
     box-shadow: -5px 10px 20px var(--alt-back), inset 5px 5px 5px var(--alt-back);
 }
 
@@ -171,7 +172,8 @@ li.vertical-list-item {
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10pt 10pt 0;
+    gap: 25px;
+    padding: 10px 10px 0;
 }
 
 .card-bottom {
